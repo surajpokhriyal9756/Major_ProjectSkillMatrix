@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: employeeskillmatrix
+    database: employeeskillmatrix  # Replace with the actual database
+    schema: user
+    tables:
+      - name: certifications
+        description: "Table containing employee certifications"  # Optional
+        # Add tests here if needed
+      - name: projects
+        description: "Table containing information about projects"  # Optional
+        # Add tests here if needed
+      - name: skills
+        # Add description and tests if needed
+      - name: users
+        # Add description and tests if needed

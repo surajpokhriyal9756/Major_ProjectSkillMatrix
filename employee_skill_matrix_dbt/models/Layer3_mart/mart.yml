@@ -1,0 +1,24 @@
+
+models:
+  - name: main_table
+    columns:
+      - name: emp_id
+        tests:
+          - not_null
+          - unique
+  - name: skill_table
+    columns:
+      - name: name
+        tests:
+          - not_null
+  - name: project_table
+    columns:
+      - name: emp_id
+        tests:
+          - not_null
+  - name: certifications_table
+    columns:
+      - name: emp_id
+        tests:
+          - not_null                    
+
