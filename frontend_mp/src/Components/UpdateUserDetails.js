@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import axios from "axios"; // Import axios for making HTTP requests
 import { useNavigate, useLocation } from "react-router-dom";
 import "./login_page.css";
-import { useAuth } from "../store/auth";
 
 const UpdateUser = ({ setCheck }) => {
   const navigate = useNavigate();
@@ -28,10 +27,15 @@ const UpdateUser = ({ setCheck }) => {
       [name]: value,
     }));
   };
-  const { storeTokenInLS } = useAuth();
-
   const handleSubmit = async (e) => {
-    console.log(formData);
+    // console.log(formData);
+    e.preventDefault();
+    // console.log(userDetail.email," ",formData.email);
+    if(userDetail.email !== formData.email){
+      alert('Employee Id does not match.Please enter correct Id.');
+      return;
+    }
+    else{
     alert("Please wait...");
     e.preventDefault();
     try {
@@ -54,6 +58,7 @@ const UpdateUser = ({ setCheck }) => {
       // Handle error response from the backend
       // For example, you can display an error message to the user
     }
+  }
     // Reset form fields after submission
     setFormData({
       firstName: "",
@@ -275,7 +280,7 @@ const UpdateUser = ({ setCheck }) => {
                     type="submit"
                     className="btn btn-primary btn-block mb-4"
                   >
-                    Sign Up
+                    Update
                   </button>
                 </form>
               </div>
