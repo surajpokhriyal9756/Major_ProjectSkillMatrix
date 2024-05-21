@@ -4,6 +4,9 @@ import { useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AdminPage.css"; // Import the CSS file
 // import axios from "axios";
+import exampleImage from '../utils/data_1.png';
+import exampleImage1 from '../utils/data_2.png';
+import exampleImage2 from '../utils/data_3.png';
 
 const UserDetails = ({ setCheck, setCheckApprover, setCheckUser }) => {
   const location = useLocation();
@@ -80,7 +83,7 @@ const UserDetails = ({ setCheck, setCheckApprover, setCheckUser }) => {
           </nav>
 
           <div className="container mt-4 example-container">
-            <h2>Dashboard</h2>
+            {/* <h2>Dashboard</h2>
             <iframe
               title="SkillCorp_BI"
               width="1140"
@@ -88,7 +91,16 @@ const UserDetails = ({ setCheck, setCheckApprover, setCheckUser }) => {
               src="https://app.powerbi.com/reportEmbed?reportId=fd1b4277-425a-4c14-8a40-8b885f8dea37&autoAuth=true&ctid=2800c0a0-70e9-49be-8733-faeaa6aced99"
               frameborder="0"
               allowFullScreen="true"
-            ></iframe>
+            ></iframe> */}
+            <div >
+            <img src={exampleImage} alt="Example" width={"1000px"}/>
+            </div>
+            <div >
+            <img src={exampleImage1} alt="Example" width={"1000px"}/>
+            </div>
+            <div>
+            <img src={exampleImage2} alt="Example" width={"1000px"}/>
+            </div>
           </div>
         </div>
       </div>
